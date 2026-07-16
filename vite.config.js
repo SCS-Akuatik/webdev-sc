@@ -1,7 +1,14 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
+import { resolve } from 'path';
 
 export default defineConfig({
   build: {
-    outDir: 'dist', // Nanti pas di-build, semua file matang akan masuk ke folder ini
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        dashboard: resolve(__dirname, 'dashboard.html'),
+        template1: resolve(__dirname, 'template-1.html')
+      }
+    }
   }
-})
+});
