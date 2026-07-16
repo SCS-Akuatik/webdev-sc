@@ -67,10 +67,11 @@ form.addEventListener('submit', async (e) => {
     // KITA UBAH BAGIAN INI: Hapus alert, ganti tulisan tombolnya
     btn.innerHTML = 'Berhasil! Mengalihkan...';
     
-    // Kasih jeda setengah detik, lalu paksa pindah pakai garis miring "/"
+    // Kasih jeda setengah detik, lalu paksa pindah pakai origin
     setTimeout(() => {
-          setTimeout(() => {
       // Ini jalur paksa biar browser nggak peduli sama tanda /? yang nyangkut
       window.location.replace(window.location.origin + '/dashboard.html');
     }, 500);
+  }
 });
+// ------------------------------------
